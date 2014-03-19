@@ -1,0 +1,17 @@
+{
+    "name": "cloudkid-tasks",
+    "version": "1.0.0",
+    "main": "deploy/cloudkid-tasks.min.js",
+    "dependencies": {
+        "cloudkid-os" : "*"
+    },
+    "ignore": [
+        "build.xml",
+        "build.properties",
+        "examples",
+        "docs",
+        "libs",
+        "src",
+        "src.order"
+    ]
+}
