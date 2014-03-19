@@ -1,0 +1,1367 @@
+{
+    "project": {
+        "name": "CloudKid States API",
+        "description": "CloudKid States API: a library providing base classes for making various gamestates",
+        "version": "1.0.0",
+        "logo": "cloudkid.png"
+    },
+    "files": {
+        "src/FunctionTask.js": {
+            "name": "src/FunctionTask.js",
+            "modules": {},
+            "classes": {
+                "cloudkid.FunctionTask": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/ListTask.js": {
+            "name": "src/ListTask.js",
+            "modules": {},
+            "classes": {
+                "cloudkid.ListTask": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/LoadTask.js": {
+            "name": "src/LoadTask.js",
+            "modules": {},
+            "classes": {
+                "cloudkid.LoadTask": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Task.js": {
+            "name": "src/Task.js",
+            "modules": {},
+            "classes": {
+                "cloudkid.Task": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/TaskEvent.js": {
+            "name": "src/TaskEvent.js",
+            "modules": {},
+            "classes": {
+                "cloudkid.TaskEvent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/TaskManager.js": {
+            "name": "src/TaskManager.js",
+            "modules": {},
+            "classes": {
+                "cloudkid.TaskManager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "cloudkid.FunctionTask": {
+            "name": "cloudkid.FunctionTask",
+            "shortname": "cloudkid.FunctionTask",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/FunctionTask.js",
+            "line": 6,
+            "description": "A task to do some generic async function task",
+            "is_constructor": 1,
+            "extends": "cloudkid.Task",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "Alias for this task",
+                    "type": "String"
+                },
+                {
+                    "name": "serviceCall",
+                    "description": "Function the service call",
+                    "type": "Function"
+                },
+                {
+                    "name": "callback",
+                    "description": "Function to call when the task is completed",
+                    "type": "Function"
+                },
+                {
+                    "name": "args",
+                    "description": "The arguments passed to the service call",
+                    "type": "*"
+                }
+            ],
+            "author": "Matt Moore"
+        },
+        "cloudkid.ListTask": {
+            "name": "cloudkid.ListTask",
+            "shortname": "cloudkid.ListTask",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/ListTask.js",
+            "line": 9,
+            "description": "A task that performs a list of tasks",
+            "extends": "cloudkid.Task",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "id",
+                    "description": "Alias for this ListTask",
+                    "type": "String"
+                },
+                {
+                    "name": "list",
+                    "description": "The list of tasks",
+                    "type": "Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "Function to call when the task is completed",
+                    "type": "Function"
+                }
+            ]
+        },
+        "cloudkid.LoadTask": {
+            "name": "cloudkid.LoadTask",
+            "shortname": "cloudkid.LoadTask",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/LoadTask.js",
+            "line": 8,
+            "description": "Load task is a common type of task used for loading assets\nthrough the MediaLoader",
+            "extends": "cloudkid.Task",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "id",
+                    "description": "Alias for the task",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "The url from which to load the asset",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "The function to call once loading is complete",
+                    "type": "Function"
+                },
+                {
+                    "name": "updateCallback",
+                    "description": "Optional call back to get load progress",
+                    "type": "Function"
+                },
+                {
+                    "name": "priority",
+                    "description": "Media loader priority of the load",
+                    "type": "Int"
+                },
+                {
+                    "name": "data",
+                    "description": "Opitonal loading options",
+                    "type": "*"
+                }
+            ]
+        },
+        "cloudkid.Task": {
+            "name": "cloudkid.Task",
+            "shortname": "cloudkid.Task",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/Task.js",
+            "line": 3,
+            "description": "A task is used by the Task Manager to do an \nasyncronous task (like loading or playback)",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "id",
+                    "description": "Alias for the task",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Function to call when the task is completed",
+                    "type": "Function"
+                }
+            ]
+        },
+        "cloudkid.TaskEvent": {
+            "name": "cloudkid.TaskEvent",
+            "shortname": "cloudkid.TaskEvent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/TaskEvent.js",
+            "line": 3,
+            "description": "Task events are used by the task manager to communicate\nwhen tasks change",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The type of event",
+                    "type": "String"
+                },
+                {
+                    "name": "task",
+                    "description": "The task this event relates to",
+                    "type": "cloudkid.Task"
+                },
+                {
+                    "name": "data",
+                    "description": "description",
+                    "type": "Object"
+                }
+            ]
+        },
+        "cloudkid.TaskManager": {
+            "name": "cloudkid.TaskManager",
+            "shortname": "cloudkid.TaskManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/TaskManager.js",
+            "line": 6,
+            "description": "The task manager is responsible for doing a series\nof asyncronous tasks",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "tasks",
+                    "description": "The series of tasks to do",
+                    "type": "Array"
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/FunctionTask.js",
+            "line": 23,
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/FunctionTask.js",
+            "line": 26,
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/FunctionTask.js",
+            "line": 29,
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/FunctionTask.js",
+            "line": 32,
+            "description": "The url of the file to load",
+            "itemtype": "property",
+            "name": "serviceCall",
+            "type": "Function",
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/FunctionTask.js",
+            "line": 39,
+            "description": "The media loader priorty of the load",
+            "itemtype": "property",
+            "name": "args",
+            "type": "*",
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/FunctionTask.js",
+            "line": 45,
+            "description": "Create the service task",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "The key for the task",
+                    "type": "String"
+                },
+                {
+                    "name": "serviceCall",
+                    "description": "Function the service call",
+                    "type": "Function"
+                },
+                {
+                    "name": "callback",
+                    "description": "The function to callback when done",
+                    "type": "Function"
+                },
+                {
+                    "name": "args",
+                    "description": "The arguments passed to the service call, (callback is first)",
+                    "type": "*"
+                }
+            ],
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/FunctionTask.js",
+            "line": 70,
+            "description": "Start the load",
+            "itemtype": "method",
+            "name": "start",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "Callback to call when the load is done",
+                    "type": "Function"
+                }
+            ],
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/FunctionTask.js",
+            "line": 80,
+            "description": "Get a string representation of this task",
+            "itemtype": "method",
+            "name": "toString",
+            "return": {
+                "description": "A string representation of this task",
+                "type": "String"
+            },
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/FunctionTask.js",
+            "line": 91,
+            "description": "Destroy this load task and don't use after this",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "cloudkid.FunctionTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 27,
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 30,
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 33,
+            "description": "The list of other tasks, as an array",
+            "itemtype": "property",
+            "name": "list",
+            "type": "Array",
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 40,
+            "description": "The internal task manager",
+            "itemtype": "property",
+            "name": "_manager",
+            "type": "cloudkid.TaskManager",
+            "access": "private",
+            "tagname": "",
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 48,
+            "description": "The load results dictionary",
+            "itemtype": "property",
+            "name": "_results",
+            "type": "Dictionary",
+            "access": "private",
+            "tagname": "",
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 56,
+            "description": "Make the list task but don't start.",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "ID of the task",
+                    "type": "String"
+                },
+                {
+                    "name": "list",
+                    "description": "List of tasks to start or a preloadJS manifest.",
+                    "type": "Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback to to call with the result of the tasks, this\n       task, and the TaskManager that loaded it",
+                    "type": "Function"
+                }
+            ],
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 97,
+            "description": "Start the load",
+            "itemtype": "method",
+            "name": "load",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "Callback to call when the task is done",
+                    "type": "Function"
+                }
+            ],
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 117,
+            "description": "Callback for when an task is done",
+            "itemtype": "method",
+            "name": "_onTaskDone",
+            "params": [
+                {
+                    "name": "ev",
+                    "description": "Task Loaded event",
+                    "type": "cloudkid.TaskEvent"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 130,
+            "description": "Callback for when the whole list is done",
+            "itemtype": "method",
+            "name": "_onAllTasksComplete",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "Callback passed to start()",
+                    "type": "Function"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 143,
+            "description": "Cancel the TaskManager used for the list of tasks. As the individual tasks are not \nkept track of, this always returns true.",
+            "itemtype": "method",
+            "name": "cancel",
+            "return": {
+                "description": "Returns true."
+            },
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 155,
+            "description": "Get a string representation of this task",
+            "itemtype": "method",
+            "name": "toString",
+            "return": {
+                "description": "A string representation of this task",
+                "type": "String"
+            },
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/ListTask.js",
+            "line": 165,
+            "description": "Don't use after this",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "cloudkid.ListTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 27,
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 30,
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 33,
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 36,
+            "description": "The url of the file to load",
+            "itemtype": "property",
+            "name": "url",
+            "type": "String",
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 43,
+            "description": "Loading options",
+            "itemtype": "property",
+            "name": "data",
+            "type": "*",
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 50,
+            "description": "The media loader priorty of the load",
+            "itemtype": "property",
+            "name": "priority",
+            "type": "Int",
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 57,
+            "description": "The optional callback to get updates (to show load progress)",
+            "itemtype": "property",
+            "name": "updateCallback",
+            "type": "Function",
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 64,
+            "description": "Init the laod task",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "The id of the task",
+                    "type": "String"
+                },
+                {
+                    "name": "url",
+                    "description": "The url to load",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "The callback to call when the load is completed",
+                    "type": "Function"
+                },
+                {
+                    "name": "updateCallback",
+                    "description": "The optional callback to get updates (to show load progress)",
+                    "type": "Function"
+                },
+                {
+                    "name": "priority",
+                    "description": "The optional priority, defaults to normal",
+                    "type": "Int"
+                },
+                {
+                    "name": "data",
+                    "description": "The optional data object, for any loading options that may have been added to the preloader",
+                    "type": "*"
+                }
+            ],
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 87,
+            "description": "Start the load",
+            "itemtype": "method",
+            "name": "start",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "Callback to call when the load is done",
+                    "type": "Function"
+                }
+            ],
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 104,
+            "description": "Cancel the task - for use in inherited classes",
+            "itemtype": "method",
+            "name": "cancel",
+            "return": {
+                "description": "If the loader removed it from the queue successfully - \n    false means that there is a 'load finished' event inbound \n    for the task manager",
+                "type": "Bool"
+            },
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 117,
+            "description": "Get a string representation of this task",
+            "itemtype": "method",
+            "name": "ToString",
+            "return": {
+                "description": "A string representation of this task",
+                "type": "String"
+            },
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/LoadTask.js",
+            "line": 128,
+            "description": "Destroy this load task and don't use after this",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "cloudkid.LoadTask"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 17,
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 20,
+            "description": "The unique id of the task",
+            "itemtype": "property",
+            "name": "id",
+            "type": "String",
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 27,
+            "description": "Callback to call when the task is completed",
+            "itemtype": "property",
+            "name": "callback",
+            "type": "Function",
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 34,
+            "description": "Bool to keep track if this has been destroyed",
+            "itemtype": "property",
+            "name": "_isDestroyed",
+            "type": "Bool",
+            "access": "protected",
+            "tagname": "",
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 42,
+            "description": "Make a task but don't load",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "ID of the task",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback to to call with the result, this task, and the\n       TaskManager that started it",
+                    "type": "Function"
+                }
+            ],
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 55,
+            "description": "Called from the task manager when a Task is finished",
+            "itemtype": "method",
+            "name": "done",
+            "params": [
+                {
+                    "name": "result",
+                    "description": "The resulting data from the return",
+                    "type": "Type"
+                },
+                {
+                    "name": "manager",
+                    "description": "The reference to the manager",
+                    "type": "cloudkid.TaskManager"
+                }
+            ],
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 69,
+            "description": "Start the load. This implementation is a NOP.",
+            "itemtype": "method",
+            "name": "start",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "Callback to call when the load is done",
+                    "type": "Function"
+                }
+            ],
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 80,
+            "description": "Cancel the task - for use in inherited classes",
+            "itemtype": "method",
+            "name": "cancel",
+            "return": {
+                "description": "If the cancel was successful",
+                "type": "Bool"
+            },
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 90,
+            "description": "Get a string representation of this task",
+            "itemtype": "method",
+            "name": "toString",
+            "return": {
+                "description": "A string representation of this task",
+                "type": "String"
+            },
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/Task.js",
+            "line": 101,
+            "description": "If this task has been __isDestroyed\nDon't use after this",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "cloudkid.Task"
+        },
+        {
+            "file": "src/TaskEvent.js",
+            "line": 21,
+            "description": "A task is about to start",
+            "itemtype": "event",
+            "name": "onItemAboutToLoad",
+            "class": "cloudkid.TaskEvent"
+        },
+        {
+            "file": "src/TaskEvent.js",
+            "line": 27,
+            "description": "A task is now starting\nevent onItemLoading",
+            "class": "cloudkid.TaskEvent"
+        },
+        {
+            "file": "src/TaskEvent.js",
+            "line": 33,
+            "description": "An task is done. The data of this event is the task's result.",
+            "itemtype": "event",
+            "name": "onItemLoaded",
+            "class": "cloudkid.TaskEvent"
+        },
+        {
+            "file": "src/TaskEvent.js",
+            "line": 39,
+            "description": "Task this event pertains to",
+            "itemtype": "property",
+            "name": "task",
+            "type": "cloudkid.Task",
+            "class": "cloudkid.TaskEvent"
+        },
+        {
+            "file": "src/TaskEvent.js",
+            "line": 46,
+            "description": "The task result",
+            "itemtype": "property",
+            "name": "data",
+            "type": "*",
+            "class": "cloudkid.TaskEvent"
+        },
+        {
+            "file": "src/TaskEvent.js",
+            "line": 53,
+            "description": "The type of event",
+            "itemtype": "property",
+            "name": "type",
+            "type": "String",
+            "class": "cloudkid.TaskEvent"
+        },
+        {
+            "file": "src/TaskEvent.js",
+            "line": 60,
+            "description": "Init the event",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The type of event",
+                    "type": "String"
+                },
+                {
+                    "name": "task",
+                    "description": "The task attached to this event",
+                    "type": "cloudkid.Task"
+                },
+                {
+                    "name": "data",
+                    "description": "The data result associated with this task",
+                    "type": "*"
+                }
+            ],
+            "class": "cloudkid.TaskEvent"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 21,
+            "description": "Adds the specified event listener",
+            "itemtype": "method",
+            "name": "addEventListener",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The string type of the event",
+                    "type": "String"
+                },
+                {
+                    "name": "listener",
+                    "description": "An object with a handleEvent method, or a function that will be called when the event is dispatched",
+                    "type": "Function|object"
+                }
+            ],
+            "return": {
+                "description": "Returns the listener for chaining or assignment",
+                "type": "Function|object"
+            },
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 30,
+            "description": "Removes the specified event listener",
+            "itemtype": "method",
+            "name": "removeEventListener",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The string type of the event",
+                    "type": "String"
+                },
+                {
+                    "name": "listener",
+                    "description": "The listener function or object",
+                    "type": "Function|object"
+                }
+            ],
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 38,
+            "description": "Removes all listeners for the specified type, or all listeners of all types",
+            "itemtype": "method",
+            "name": "removeAllEventListeners",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The string type of the event. If omitted, all listeners for all types will be removed.",
+                    "type": "String"
+                }
+            ],
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 45,
+            "description": "Dispatches the specified event",
+            "itemtype": "method",
+            "name": "dispatchEvent",
+            "params": [
+                {
+                    "name": "enventObj",
+                    "description": "An object with a \"type\" property, or a string type",
+                    "type": "Object|String"
+                },
+                {
+                    "name": "target",
+                    "description": "The object to use as the target property of the event object",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Returns true if any listener returned true",
+                "type": "Bool"
+            },
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 54,
+            "description": "Indicates whether there is at least one listener for the specified event type",
+            "itemtype": "method",
+            "name": "hasEventListener",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The string type of the event",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Returns true if there is at least one listener for the specified event",
+                "type": "Bool"
+            },
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 62,
+            "description": "Createjs EventDispatcher method",
+            "itemtype": "property",
+            "name": "_listeners description",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 73,
+            "description": "The current version of the state manager",
+            "itemtype": "property",
+            "name": "VERSION",
+            "type": "String",
+            "static": 1,
+            "final": 1,
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 82,
+            "description": "Event dispatched when tasks are all done",
+            "itemtype": "event",
+            "name": "onAllTasksDone",
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 89,
+            "description": "Collection of all tasks",
+            "itemtype": "property",
+            "name": "tasks",
+            "type": "Array",
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 96,
+            "description": "The current tasks",
+            "itemtype": "property",
+            "name": "_currentTaskes",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 104,
+            "description": "If we're paused and should therefore not automatically proceed to the\nnext task after each task completes",
+            "itemtype": "property",
+            "name": "paused",
+            "type": "Bool",
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 112,
+            "description": "The number of tasks that are currently in progress",
+            "itemtype": "property",
+            "name": "_tasksInProgress",
+            "type": "Int",
+            "access": "private",
+            "tagname": "",
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 120,
+            "description": "If the manager is destroyed",
+            "itemtype": "property",
+            "name": "_isDestroyed",
+            "type": "Bool",
+            "access": "private",
+            "tagname": "",
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 128,
+            "description": "Convenience method to execute tasks without having to setup the event listener",
+            "itemtype": "method",
+            "name": "process",
+            "static": 1,
+            "params": [
+                {
+                    "name": "tasks",
+                    "description": "The collection of tasks",
+                    "type": "Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "The callback",
+                    "type": "Function"
+                },
+                {
+                    "name": "startAll",
+                    "description": "If we should start all tasks",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "true"
+                },
+                {
+                    "name": "immediateDestroy",
+                    "description": "Destroy after load",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "true"
+                }
+            ],
+            "return": {
+                "description": "The instance of the task manager created",
+                "type": "TaskManager"
+            },
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 170,
+            "description": "Initializes the task manager",
+            "itemtype": "method",
+            "name": "initialize",
+            "params": [
+                {
+                    "name": "tasks",
+                    "description": "The optional array of tasks, we can also add this later",
+                    "type": "Array"
+                }
+            ],
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 182,
+            "description": "Convenience function to add a task",
+            "itemtype": "method",
+            "name": "addTask",
+            "params": [
+                {
+                    "name": "task",
+                    "description": "The task object to load",
+                    "type": "cloudkid.Task"
+                }
+            ],
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 193,
+            "description": "Add bunch of tasks",
+            "itemtype": "method",
+            "name": "addTasks",
+            "params": [
+                {
+                    "name": "tasks",
+                    "description": "Collection of tasks to add",
+                    "type": "Array"
+                }
+            ],
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 206,
+            "description": "Cancel and remove all tasks",
+            "itemtype": "method",
+            "name": "removeAll",
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 236,
+            "description": "Cancels all tasks with a given id",
+            "itemtype": "method",
+            "name": "cancelTask",
+            "params": [
+                {
+                    "name": "taskId",
+                    "description": "The task id to remove.",
+                    "type": "String"
+                }
+            ],
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 268,
+            "description": "Start the next task in the tasks list. When it is done, the\ntask's callback will be called.  If the manager is not paused after\nthe task's callback returns, the manager will start the next task.",
+            "itemtype": "method",
+            "name": "startNext",
+            "return": {
+                "description": "The task that was started or null if the list contained no\n        tasks to be processed",
+                "type": "cloudkid.Task"
+            },
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 311,
+            "description": "Callback for when an task is done",
+            "itemtype": "method",
+            "name": "onTaskDone",
+            "params": [
+                {
+                    "name": "result",
+                    "description": "Result of the task",
+                    "type": "*"
+                },
+                {
+                    "name": "task",
+                    "description": "Task that is done",
+                    "type": "cloudkid.Task"
+                }
+            ],
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 350,
+            "description": "Start the next task until there are no more tasks to start",
+            "itemtype": "method",
+            "name": "startAll",
+            "return": {
+                "description": "All tasks that were started",
+                "type": "Array"
+            },
+            "class": "cloudkid.TaskManager"
+        },
+        {
+            "file": "src/TaskManager.js",
+            "line": 373,
+            "description": "We don't want to use the task manager after this",
+            "itemtype": "method",
+            "name": "destroy",
+            "class": "cloudkid.TaskManager"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/FunctionTask.js:45"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/FunctionTask.js:70"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/FunctionTask.js:80"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/FunctionTask.js:91"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/ListTask.js:56"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/ListTask.js:97"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/ListTask.js:117"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/ListTask.js:130"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/ListTask.js:143"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/ListTask.js:155"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/ListTask.js:165"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/LoadTask.js:64"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/LoadTask.js:87"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/LoadTask.js:104"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/LoadTask.js:117"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/LoadTask.js:128"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Task.js:42"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Task.js:55"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Task.js:69"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Task.js:80"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Task.js:90"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/Task.js:101"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskEvent.js:60"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:21"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:30"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:38"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:45"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:54"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:170"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:182"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:193"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:206"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:236"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:268"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:311"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:350"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " src/TaskManager.js:373"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/FunctionTask.js:23"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/FunctionTask.js:26"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/FunctionTask.js:29"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/ListTask.js:27"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/ListTask.js:30"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/LoadTask.js:27"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/LoadTask.js:30"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/LoadTask.js:33"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/Task.js:17"
+        },
+        {
+            "message": "Missing item type\nA task is now starting\nevent onItemLoading",
+            "line": " src/TaskEvent.js:27"
+        }
+    ]
+}
