@@ -1,3 +1,0 @@
-namespace/namespace.js
-CloudKidDebug/Debug.js
-CloudKidOS/deploy/cloudkid-os-createjs.min.js
