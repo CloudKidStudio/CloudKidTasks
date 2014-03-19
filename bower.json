@@ -1,7 +1,7 @@
 {
     "name": "cloudkid-tasks",
     "version": "1.0.0",
-    "main": "deploy/cloudkid-tasks.min.js",
+    "main": "dist/cloudkid-tasks.min.js",
     "dependencies": {
         "cloudkid-os" : "*"
     },
