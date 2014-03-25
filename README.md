@@ -5,7 +5,8 @@ Asynchronous task manager for CloudKidOS
 
 ##Documentation##
 
-http://cloudkidstudio.github.io/CloudKidAudio/
+http://cloudkidstudio.github.io/CloudKidTasks/
+
 ##Installation##
 
 CloudKid Tasks can be install using Bower.
