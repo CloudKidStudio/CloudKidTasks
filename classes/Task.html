@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
     <link rel="shortcut icon" type="image/png" href="../assets/favicon.ico">
     <script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
-	<title>CloudKid States API v1.0.0 API Documentation : cloudkid.FunctionTask</title>  
+	<title>CloudKid States API v1.0.0 API Documentation : Task</title>  
 </head>
 <body class="yui3-skin-sam">
 
@@ -39,21 +39,23 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="../classes/cloudkid.FunctionTask.html">cloudkid.FunctionTask</a></li>
+                <li><a href="../classes/FunctionTask.html">FunctionTask</a></li>
             
-                <li><a href="../classes/cloudkid.ListTask.html">cloudkid.ListTask</a></li>
+                <li><a href="../classes/ListTask.html">ListTask</a></li>
             
-                <li><a href="../classes/cloudkid.LoadTask.html">cloudkid.LoadTask</a></li>
+                <li><a href="../classes/LoadTask.html">LoadTask</a></li>
             
-                <li><a href="../classes/cloudkid.Task.html">cloudkid.Task</a></li>
+                <li><a href="../classes/Task.html">Task</a></li>
             
-                <li><a href="../classes/cloudkid.TaskEvent.html">cloudkid.TaskEvent</a></li>
+                <li><a href="../classes/TaskEvent.html">TaskEvent</a></li>
             
-                <li><a href="../classes/cloudkid.TaskManager.html">cloudkid.TaskManager</a></li>
+                <li><a href="../classes/TaskManager.html">TaskManager</a></li>
             
             </ul>
 
             <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/cloudkid.html">cloudkid</a></li>
             
             </ul>
         </div>
@@ -88,22 +90,22 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1>cloudkid.FunctionTask Class</h1>
+                        <h1>Task Class</h1>
 <div class="box meta">
     
 
     
-        <div class="extends">
-            Extends <a href="../classes/cloudkid.Task.html" class="crosslink">cloudkid.Task</a>
-        </div>
-    
 
     
         <div class="foundat">
-            Defined in: <a href="../files/src_FunctionTask.js.html#l6"><code>cloudkid.FunctionTask:6</code></a>
+            Defined in: <a href="../files/src_Task.js.html#l3"><code>Task:3</code></a>
         </div>
     
 
+    
+        
+            Namespace: <a href="../modules/cloudkid.html">cloudkid</a>
+        
     
 
     
@@ -112,167 +114,11 @@
 
 
 <div class="box intro">
-    <p>A task to do some generic async function task</p>
+    <p>A task is used by the Task Manager to do an 
+asyncronous task (like loading or playback)</p>
 
 </div>
 
-
-    <div class="constructor">
-        <h2>Constructor</h2>
-        <div id="method_cloudkid.FunctionTask" class="method item">
-    <h3 class="name"><code>cloudkid.FunctionTask</code></h3>
-
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        <code>id</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code>serviceCall</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code>callback</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code>args</code>
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/src_FunctionTask.js.html#l6"><code>cloudkid.FunctionTask:6</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <ul class="params-list">
-            
-                <li class="param">
-                    
-                        <code class="param-name">id</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Alias for this task</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name">serviceCall</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Function the service call</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name">callback</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Function to call when the task is completed</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name">args</code>
-                        <span class="type"></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The arguments passed to the service call</p>
-
-                    </div>
-
-                    
-                </li>
-            
-            </ul>
-        </div>
-    
-
-    
-
-    
-</div>
-
-    </div>
 
 
 <div id="classdocs" class="tabview">
@@ -297,44 +143,44 @@
                 <div class="index-section methods">
                     <h3>Methods</h3>
 
-                    <ul class="index-list methods extends">
+                    <ul class="index-list methods">
                         
-                            <li class="index-item method inherited">
+                            <li class="index-item method">
                                 <a href="#method_cancel">cancel</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method inherited">
+                            <li class="index-item method">
                                 <a href="#method_destroy">destroy</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method inherited">
+                            <li class="index-item method">
                                 <a href="#method_done">done</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method inherited">
+                            <li class="index-item method">
                                 <a href="#method_initialize">initialize</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method inherited">
+                            <li class="index-item method">
                                 <a href="#method_start">start</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method inherited">
+                            <li class="index-item method">
                                 <a href="#method_toString">toString</a>
 
                                 
@@ -349,9 +195,9 @@
                 <div class="index-section properties">
                     <h3>Properties</h3>
 
-                    <ul class="index-list properties extends">
+                    <ul class="index-list properties">
                         
-                            <li class="index-item property protected inherited">
+                            <li class="index-item property protected">
                                 <a href="#property__isDestroyed">_isDestroyed</a>
 
                                 
@@ -359,28 +205,14 @@
                             </li>
                         
                             <li class="index-item property">
-                                <a href="#property_args">args</a>
-
-                                
-                                
-                            </li>
-                        
-                            <li class="index-item property inherited">
                                 <a href="#property_callback">callback</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item property inherited">
-                                <a href="#property_id">id</a>
-
-                                
-                                
-                            </li>
-                        
                             <li class="index-item property">
-                                <a href="#property_serviceCall">serviceCall</a>
+                                <a href="#property_id">id</a>
 
                                 
                                 
@@ -400,7 +232,7 @@
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_cancel" class="method item inherited">
+                    <div id="method_cancel" class="method item">
     <h3 class="name"><code>cancel</code></h3>
 
     
@@ -428,12 +260,15 @@
     <div class="meta">
         
             
-                <p>Inherited from
-                <a href="../classes/cloudkid.Task.html#method_cancel">cloudkid.Task</a>:
+                
+                <p>
+                
+                Defined in
+                
             
         
         
-        <a href="../files/src_Task.js.html#l80"><code>cancel:80</code></a>
+        <a href="../files/src_Task.js.html#l81"><code>cancel:81</code></a>
         
         </p>
 
@@ -493,16 +328,16 @@
 
     <div class="meta">
         
-            <p>Inherited from
-            <a href="../classes/cloudkid.Task.html#method_destroy">
-                cloudkid.Task
-            </a>
             
-            but overwritten in
+                
+                <p>
+                
+                Defined in
+                
             
         
         
-        <a href="../files/src_FunctionTask.js.html#l91"><code>destroy:91</code></a>
+        <a href="../files/src_Task.js.html#l102"><code>destroy:102</code></a>
         
         </p>
 
@@ -513,7 +348,8 @@
     </div>
 
     <div class="description">
-        <p>Destroy this load task and don&#39;t use after this</p>
+        <p>If this task has been __isDestroyed
+Don&#39;t use after this</p>
 
     </div>
 
@@ -525,7 +361,7 @@
 </div>
 
                 
-                    <div id="method_done" class="method item inherited">
+                    <div id="method_done" class="method item">
     <h3 class="name"><code>done</code></h3>
 
     
@@ -565,12 +401,15 @@
     <div class="meta">
         
             
-                <p>Inherited from
-                <a href="../classes/cloudkid.Task.html#method_done">cloudkid.Task</a>:
+                
+                <p>
+                
+                Defined in
+                
             
         
         
-        <a href="../files/src_Task.js.html#l55"><code>done:55</code></a>
+        <a href="../files/src_Task.js.html#l56"><code>done:56</code></a>
         
         </p>
 
@@ -610,7 +449,7 @@
                 <li class="param">
                     
                         <code class="param-name">manager</code>
-                        <span class="type"><a href="../classes/cloudkid.TaskManager.html" class="crosslink">cloudkid.TaskManager</a></span>
+                        <span class="type"><a href="../classes/TaskManager.html" class="crosslink">TaskManager</a></span>
                     
 
                     
@@ -648,19 +487,7 @@
             
                 <li class="arg">
                     
-                        <code>serviceCall</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
                         <code>callback</code>
-                    
-                </li>
-            
-                <li class="arg">
-                    
-                        <code>args</code>
                     
                 </li>
             
@@ -684,16 +511,16 @@
 
     <div class="meta">
         
-            <p>Inherited from
-            <a href="../classes/cloudkid.Task.html#method_initialize">
-                cloudkid.Task
-            </a>
             
-            but overwritten in
+                
+                <p>
+                
+                Defined in
+                
             
         
         
-        <a href="../files/src_FunctionTask.js.html#l45"><code>initialize:45</code></a>
+        <a href="../files/src_Task.js.html#l43"><code>initialize:43</code></a>
         
         </p>
 
@@ -704,7 +531,7 @@
     </div>
 
     <div class="description">
-        <p>Create the service task</p>
+        <p>Make a task but don&#39;t load</p>
 
     </div>
 
@@ -723,23 +550,7 @@
                     
 
                     <div class="param-description">
-                        <p>The key for the task</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name">serviceCall</code>
-                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>Function the service call</p>
+                        <p>ID of the task</p>
 
                     </div>
 
@@ -755,23 +566,8 @@
                     
 
                     <div class="param-description">
-                        <p>The function to callback when done</p>
-
-                    </div>
-
-                    
-                </li>
-            
-                <li class="param">
-                    
-                        <code class="param-name">args</code>
-                        <span class="type"></span>
-                    
-
-                    
-
-                    <div class="param-description">
-                        <p>The arguments passed to the service call, (callback is first)</p>
+                        <p>Callback to to call with the result, this task, and the
+       TaskManager that started it</p>
 
                     </div>
 
@@ -821,16 +617,16 @@
 
     <div class="meta">
         
-            <p>Inherited from
-            <a href="../classes/cloudkid.Task.html#method_start">
-                cloudkid.Task
-            </a>
             
-            but overwritten in
+                
+                <p>
+                
+                Defined in
+                
             
         
         
-        <a href="../files/src_FunctionTask.js.html#l70"><code>start:70</code></a>
+        <a href="../files/src_Task.js.html#l70"><code>start:70</code></a>
         
         </p>
 
@@ -841,7 +637,7 @@
     </div>
 
     <div class="description">
-        <p>Start the load</p>
+        <p>Start the load. This implementation is a NOP.</p>
 
     </div>
 
@@ -904,16 +700,16 @@
 
     <div class="meta">
         
-            <p>Inherited from
-            <a href="../classes/cloudkid.Task.html#method_toString">
-                cloudkid.Task
-            </a>
             
-            but overwritten in
+                
+                <p>
+                
+                Defined in
+                
             
         
         
-        <a href="../files/src_FunctionTask.js.html#l80"><code>toString:80</code></a>
+        <a href="../files/src_Task.js.html#l91"><code>toString:91</code></a>
         
         </p>
 
@@ -958,7 +754,7 @@
                 <h2 class="off-left">Properties</h2>
 
                 
-                    <div id="property__isDestroyed" class="property item protected inherited">
+                    <div id="property__isDestroyed" class="property item protected">
     <h3 class="name"><code>_isDestroyed</code></h3>
     <span class="type">Bool</span>
 
@@ -975,12 +771,15 @@
     <div class="meta">
         
             
-                <p>Inherited from
-                <a href="../classes/cloudkid.Task.html#property__isDestroyed">cloudkid.Task</a>:
+                
+                <p>
+                
+                Defined in
+                
             
         
         
-        <a href="../files/src_Task.js.html#l34"><code>_isDestroyed:34</code></a>
+        <a href="../files/src_Task.js.html#l35"><code>_isDestroyed:35</code></a>
         
         </p>
 
@@ -1002,9 +801,9 @@
 </div>
 
                 
-                    <div id="property_args" class="property item">
-    <h3 class="name"><code>args</code></h3>
-    <span class="type"></span>
+                    <div id="property_callback" class="property item">
+    <h3 class="name"><code>callback</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
 
     
 
@@ -1025,49 +824,7 @@
             
         
         
-        <a href="../files/src_FunctionTask.js.html#l39"><code>args:39</code></a>
-        
-        </p>
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>The media loader priorty of the load</p>
-
-    </div>
-
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="property_callback" class="property item inherited">
-    <h3 class="name"><code>callback</code></h3>
-    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/cloudkid.Task.html#property_callback">cloudkid.Task</a>:
-            
-        
-        
-        <a href="../files/src_Task.js.html#l27"><code>callback:27</code></a>
+        <a href="../files/src_Task.js.html#l28"><code>callback:28</code></a>
         
         </p>
 
@@ -1089,51 +846,9 @@
 </div>
 
                 
-                    <div id="property_id" class="property item inherited">
+                    <div id="property_id" class="property item">
     <h3 class="name"><code>id</code></h3>
     <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                <p>Inherited from
-                <a href="../classes/cloudkid.Task.html#property_id">cloudkid.Task</a>:
-            
-        
-        
-        <a href="../files/src_Task.js.html#l20"><code>id:20</code></a>
-        
-        </p>
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <p>The unique id of the task</p>
-
-    </div>
-
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="property_serviceCall" class="property item">
-    <h3 class="name"><code>serviceCall</code></h3>
-    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
 
     
 
@@ -1154,7 +869,7 @@
             
         
         
-        <a href="../files/src_FunctionTask.js.html#l32"><code>serviceCall:32</code></a>
+        <a href="../files/src_Task.js.html#l21"><code>id:21</code></a>
         
         </p>
 
@@ -1164,7 +879,7 @@
     </div>
 
     <div class="description">
-        <p>The url of the file to load</p>
+        <p>The unique id of the task</p>
 
     </div>
 

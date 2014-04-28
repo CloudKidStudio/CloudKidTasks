@@ -39,21 +39,23 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
-                <li><a href="../classes/cloudkid.FunctionTask.html">cloudkid.FunctionTask</a></li>
+                <li><a href="../classes/FunctionTask.html">FunctionTask</a></li>
             
-                <li><a href="../classes/cloudkid.ListTask.html">cloudkid.ListTask</a></li>
+                <li><a href="../classes/ListTask.html">ListTask</a></li>
             
-                <li><a href="../classes/cloudkid.LoadTask.html">cloudkid.LoadTask</a></li>
+                <li><a href="../classes/LoadTask.html">LoadTask</a></li>
             
-                <li><a href="../classes/cloudkid.Task.html">cloudkid.Task</a></li>
+                <li><a href="../classes/Task.html">Task</a></li>
             
-                <li><a href="../classes/cloudkid.TaskEvent.html">cloudkid.TaskEvent</a></li>
+                <li><a href="../classes/TaskEvent.html">TaskEvent</a></li>
             
-                <li><a href="../classes/cloudkid.TaskManager.html">cloudkid.TaskManager</a></li>
+                <li><a href="../classes/TaskManager.html">TaskManager</a></li>
             
             </ul>
 
             <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/cloudkid.html">cloudkid</a></li>
             
             </ul>
         </div>
@@ -104,7 +106,8 @@
 	*  The task manager is responsible for doing a series
 	*  of asyncronous tasks
 	*  
-	*  @class cloudkid.TaskManager
+	*  @module cloudkid
+	*  @class TaskManager
 	*  @constructor
 	*  @param {Array} tasks The series of tasks to do
 	*/
@@ -280,7 +283,7 @@
 	*  Convenience function to add a task
 	*  
 	*  @function addTask
-	*  @param {cloudkid.Task} task The task object to load
+	*  @param {Task} task The task object to load
 	*/
 	p.addTask = function(task)
 	{
@@ -367,7 +370,7 @@
 	*   task&#x27;s callback will be called.  If the manager is not paused after
 	*   the task&#x27;s callback returns, the manager will start the next task.
 	*   @function startNext
-	*   @return {cloudkid.Task} The task that was started or null if the list contained no
+	*   @return {Task} The task that was started or null if the list contained no
 	*           tasks to be processed
 	*/
 	p.startNext = function()
@@ -410,7 +413,7 @@
 	*   
 	*   @function onTaskDone
 	*   @param {*} result Result of the task
-	*   @param {cloudkid.Task} task Task that is done
+	*   @param {Task} task Task that is done
 	*/
 	p.onTaskDone = function(task, result)
 	{

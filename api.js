@@ -1,14 +1,22 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "cloudkid.FunctionTask",
-        "cloudkid.ListTask",
-        "cloudkid.LoadTask",
-        "cloudkid.Task",
-        "cloudkid.TaskEvent",
-        "cloudkid.TaskManager"
+        "FunctionTask",
+        "ListTask",
+        "LoadTask",
+        "Task",
+        "TaskEvent",
+        "TaskManager"
     ],
-    "modules": [],
-    "allModules": []
+    "modules": [
+        "cloudkid"
+    ],
+    "allModules": [
+        {
+            "displayName": "cloudkid",
+            "name": "cloudkid",
+            "description": "A task to do some generic async function task"
+        }
+    ]
 } };
 });
