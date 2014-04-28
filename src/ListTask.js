@@ -9,8 +9,9 @@
 	/**
 	*   A task that performs a list of tasks
 	*   
-	*   @class cloudkid.ListTask
-	*   @extends cloudkid.Task
+	*   @module cloudkid
+	*   @class ListTask
+	*   @extends Task
 	*   @constructor
 	*   @param {String} id Alias for this ListTask
 	*   @param {Array} list The list of tasks
@@ -40,7 +41,7 @@
 	/**
 	* The internal task manager
 	* 
-	* @property {cloudkid.TaskManager} _manager
+	* @property {TaskManager} _manager
 	* @private
 	*/
 	p._manager = null;
@@ -117,7 +118,7 @@
 	/**
 	*   Callback for when an task is done
 	*   @function _onTaskDone
-	*   @param {cloudkid.TaskEvent} ev Task Loaded event
+	*   @param {TaskEvent} ev Task Loaded event
 	*   @private
 	*/
 	p._onTaskDone = function(ev)

@@ -4,10 +4,11 @@
 	*  Task events are used by the task manager to communicate
 	*  when tasks change
 	*  
-	*  @class cloudkid.TaskEvent
+	*  @module cloudkid
+	*  @class TaskEvent
 	*  @constructor
 	*  @param {String} type The type of event
-	*  @param {cloudkid.Task} task The task this event relates to
+	*  @param {Task} task The task this event relates to
 	*  @param {object} data description
 	*/
 	var TaskEvent = function(type, task, data)
@@ -39,7 +40,7 @@
 	/**
 	* Task this event pertains to
 	* 
-	* @property {cloudkid.Task} task
+	* @property {Task} task
 	*/
 	p.task = null;
 	
@@ -62,7 +63,7 @@
 	*  
 	*  @function initialize
 	*  @param {String} type The type of event
-	*  @param {cloudkid.Task} task The task attached to this event
+	*  @param {Task} task The task attached to this event
 	*  @param {*} data The data result associated with this task
 	*/
 	p.initialize = function(type, task, data)

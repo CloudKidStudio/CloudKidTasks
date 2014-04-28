@@ -6,14 +6,14 @@
 	/**
 	*   A task to do some generic async function task
 	*   
-	*   @class cloudkid.FunctionTask
+	*   @module cloudkid
+	*   @class FunctionTask
 	*   @constructor
-	*   @extends cloudkid.Task
+	*   @extends Task
 	*   @param {String} id Alias for this task
 	*   @param {function} serviceCall Function the service call
 	*   @param {function} callback Function to call when the task is completed
 	*   @param {*} args The arguments passed to the service call
-	*   @author Matt Moore
 	*/
 	var FunctionTask = function(id, serviceCall, callback, args)
 	{

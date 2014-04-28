@@ -4,7 +4,8 @@
 	*  A task is used by the Task Manager to do an 
 	*  asyncronous task (like loading or playback)
 	*  
-	*  @class cloudkid.Task
+	*  @module cloudkid
+	*  @class Task
 	*  @constructor
 	*  @param {String} id Alias for the task
 	*  @param {function} callback Function to call when the task is completed
@@ -56,7 +57,7 @@
 	*   Called from the task manager when a Task is finished
 	*   @function done
 	*   @param {type} result The resulting data from the return
-	*   @param {cloudkid.TaskManager} manager The reference to the manager
+	*   @param {TaskManager} manager The reference to the manager
 	*/
 	p.done = function(result, manager)
 	{

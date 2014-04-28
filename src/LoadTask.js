@@ -9,8 +9,9 @@
 	*  Load task is a common type of task used for loading assets
 	*  through the MediaLoader
 	*  
-	*  @class cloudkid.LoadTask
-	*  @extends cloudkid.Task
+	*  @module cloudkid
+	*  @class LoadTask
+	*  @extends Task
 	*  @constructor
 	*  @param {String} id Alias for the task
 	*  @param {String} url The url from which to load the asset

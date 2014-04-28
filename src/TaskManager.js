@@ -7,7 +7,8 @@
 	*  The task manager is responsible for doing a series
 	*  of asyncronous tasks
 	*  
-	*  @class cloudkid.TaskManager
+	*  @module cloudkid
+	*  @class TaskManager
 	*  @constructor
 	*  @param {Array} tasks The series of tasks to do
 	*/
@@ -183,7 +184,7 @@
 	*  Convenience function to add a task
 	*  
 	*  @function addTask
-	*  @param {cloudkid.Task} task The task object to load
+	*  @param {Task} task The task object to load
 	*/
 	p.addTask = function(task)
 	{
@@ -270,7 +271,7 @@
 	*   task's callback will be called.  If the manager is not paused after
 	*   the task's callback returns, the manager will start the next task.
 	*   @function startNext
-	*   @return {cloudkid.Task} The task that was started or null if the list contained no
+	*   @return {Task} The task that was started or null if the list contained no
 	*           tasks to be processed
 	*/
 	p.startNext = function()
@@ -313,7 +314,7 @@
 	*   
 	*   @function onTaskDone
 	*   @param {*} result Result of the task
-	*   @param {cloudkid.Task} task Task that is done
+	*   @param {Task} task Task that is done
 	*/
 	p.onTaskDone = function(task, result)
 	{
