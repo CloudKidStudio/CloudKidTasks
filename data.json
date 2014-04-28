@@ -3,7 +3,7 @@
         "name": "CloudKid States API",
         "description": "CloudKid States API: a library providing base classes for making various gamestates",
         "version": "1.0.0",
-        "logo": "cloudkid.png"
+        "logo": ""
     },
     "files": {
         "src/FunctionTask.js": {
