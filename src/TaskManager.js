@@ -1,3 +1,6 @@
+/**
+*  @module cloudkid
+*/
 (function(){
 
 	// Imports
@@ -7,7 +10,6 @@
 	*  The task manager is responsible for doing a series
 	*  of asyncronous tasks
 	*  
-	*  @module cloudkid
 	*  @class TaskManager
 	*  @constructor
 	*  @param {Array} tasks The series of tasks to do

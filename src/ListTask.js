@@ -1,3 +1,6 @@
+/**
+*  @module cloudkid
+*/
 (function(){
 	
 	// Imports
@@ -9,7 +12,6 @@
 	/**
 	*   A task that performs a list of tasks
 	*   
-	*   @module cloudkid
 	*   @class ListTask
 	*   @extends Task
 	*   @constructor

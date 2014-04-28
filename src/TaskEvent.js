@@ -1,10 +1,12 @@
+/**
+*  @module cloudkid
+*/
 (function(){
 	
 	/**
 	*  Task events are used by the task manager to communicate
 	*  when tasks change
 	*  
-	*  @module cloudkid
 	*  @class TaskEvent
 	*  @constructor
 	*  @param {String} type The type of event

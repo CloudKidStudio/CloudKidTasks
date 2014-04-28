@@ -1,3 +1,6 @@
+/**
+*  @module cloudkid
+*/
 (function(undefined){
 	
 	// Imports
@@ -9,7 +12,6 @@
 	*  Load task is a common type of task used for loading assets
 	*  through the MediaLoader
 	*  
-	*  @module cloudkid
 	*  @class LoadTask
 	*  @extends Task
 	*  @constructor

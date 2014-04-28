@@ -1,10 +1,12 @@
+/**
+*  @module cloudkid
+*/
 (function(){
 	
 	/**
 	*  A task is used by the Task Manager to do an 
 	*  asyncronous task (like loading or playback)
 	*  
-	*  @module cloudkid
 	*  @class Task
 	*  @constructor
 	*  @param {String} id Alias for the task

@@ -1,3 +1,6 @@
+/**
+*  @module cloudkid
+*/
 (function(){
 	
 	// Imports
@@ -6,7 +9,6 @@
 	/**
 	*   A task to do some generic async function task
 	*   
-	*   @module cloudkid
 	*   @class FunctionTask
 	*   @constructor
 	*   @extends Task
