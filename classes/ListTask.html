@@ -95,10 +95,14 @@
     
 
     
+        <div class="extends">
+            Extends <a href="../classes/Task.html" class="crosslink">Task</a>
+        </div>
+    
 
     
         <div class="foundat">
-            Defined in: <a href="../files/src_ListTask.js.html#l9"><code>ListTask:9</code></a>
+            Defined in: <a href="../files/src_ListTask.js.html#l12"><code>ListTask:12</code></a>
         </div>
     
 
@@ -118,6 +122,141 @@
 
 </div>
 
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+        <div id="method_ListTask" class="method item">
+    <h3 class="name"><code>ListTask</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>id</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>list</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>callback</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/src_ListTask.js.html#l12"><code>ListTask:12</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">id</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Alias for this ListTask</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">list</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The list of tasks</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">callback</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Function to call when the task is completed</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+    </div>
 
 
 <div id="classdocs" class="tabview">
@@ -142,7 +281,7 @@
                 <div class="index-section methods">
                     <h3>Methods</h3>
 
-                    <ul class="index-list methods">
+                    <ul class="index-list methods extends">
                         
                             <li class="index-item method private">
                                 <a href="#method__onAllTasksComplete">_onAllTasksComplete</a>
@@ -158,21 +297,28 @@
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
                                 <a href="#method_cancel">cancel</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
                                 <a href="#method_destroy">destroy</a>
 
                                 
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
+                                <a href="#method_done">done</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
                                 <a href="#method_initialize">initialize</a>
 
                                 
@@ -186,7 +332,14 @@
                                 
                             </li>
                         
-                            <li class="index-item method">
+                            <li class="index-item method inherited">
+                                <a href="#method_start">start</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item method inherited">
                                 <a href="#method_toString">toString</a>
 
                                 
@@ -201,7 +354,14 @@
                 <div class="index-section properties">
                     <h3>Properties</h3>
 
-                    <ul class="index-list properties">
+                    <ul class="index-list properties extends">
+                        
+                            <li class="index-item property protected inherited">
+                                <a href="#property__isDestroyed">_isDestroyed</a>
+
+                                
+                                
+                            </li>
                         
                             <li class="index-item property private">
                                 <a href="#property__manager">_manager</a>
@@ -212,6 +372,20 @@
                         
                             <li class="index-item property private">
                                 <a href="#property__results">_results</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_callback">callback</a>
+
+                                
+                                
+                            </li>
+                        
+                            <li class="index-item property inherited">
+                                <a href="#property_id">id</a>
 
                                 
                                 
@@ -282,7 +456,7 @@
             
         
         
-        <a href="../files/src_ListTask.js.html#l131"><code>_onAllTasksComplete:131</code></a>
+        <a href="../files/src_ListTask.js.html#l133"><code>_onAllTasksComplete:133</code></a>
         
         </p>
 
@@ -373,7 +547,7 @@
             
         
         
-        <a href="../files/src_ListTask.js.html#l118"><code>_onTaskDone:118</code></a>
+        <a href="../files/src_ListTask.js.html#l120"><code>_onTaskDone:120</code></a>
         
         </p>
 
@@ -447,16 +621,16 @@
 
     <div class="meta">
         
+            <p>Inherited from
+            <a href="../classes/Task.html#method_cancel">
+                Task
+            </a>
             
-                
-                <p>
-                
-                Defined in
-                
+            but overwritten in
             
         
         
-        <a href="../files/src_ListTask.js.html#l144"><code>cancel:144</code></a>
+        <a href="../files/src_ListTask.js.html#l146"><code>cancel:146</code></a>
         
         </p>
 
@@ -515,16 +689,16 @@ kept track of, this always returns true.</p>
 
     <div class="meta">
         
+            <p>Inherited from
+            <a href="../classes/Task.html#method_destroy">
+                Task
+            </a>
             
-                
-                <p>
-                
-                Defined in
-                
+            but overwritten in
             
         
         
-        <a href="../files/src_ListTask.js.html#l166"><code>destroy:166</code></a>
+        <a href="../files/src_ListTask.js.html#l168"><code>destroy:168</code></a>
         
         </p>
 
@@ -539,6 +713,114 @@ kept track of, this always returns true.</p>
 
     </div>
 
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="method_done" class="method item inherited">
+    <h3 class="name"><code>done</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>result</code>
+                    
+                </li>
+            
+                <li class="arg">
+                    
+                        <code>manager</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Task.html#method_done">Task</a>:
+            
+        
+        
+        <a href="../files/src_Task.js.html#l58"><code>done:58</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Called from the task manager when a Task is finished</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">result</code>
+                        <span class="type">Type</span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The resulting data from the return</p>
+
+                    </div>
+
+                    
+                </li>
+            
+                <li class="param">
+                    
+                        <code class="param-name">manager</code>
+                        <span class="type"><a href="../classes/TaskManager.html" class="crosslink">TaskManager</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>The reference to the manager</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
     
 
     
@@ -592,16 +874,16 @@ kept track of, this always returns true.</p>
 
     <div class="meta">
         
+            <p>Inherited from
+            <a href="../classes/Task.html#method_initialize">
+                Task
+            </a>
             
-                
-                <p>
-                
-                Defined in
-                
+            but overwritten in
             
         
         
-        <a href="../files/src_ListTask.js.html#l57"><code>initialize:57</code></a>
+        <a href="../files/src_ListTask.js.html#l59"><code>initialize:59</code></a>
         
         </p>
 
@@ -723,7 +1005,7 @@ kept track of, this always returns true.</p>
             
         
         
-        <a href="../files/src_ListTask.js.html#l98"><code>load:98</code></a>
+        <a href="../files/src_ListTask.js.html#l100"><code>load:100</code></a>
         
         </p>
 
@@ -770,6 +1052,92 @@ kept track of, this always returns true.</p>
 </div>
 
                 
+                    <div id="method_start" class="method item inherited">
+    <h3 class="name"><code>start</code></h3>
+
+    
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+            
+                <li class="arg">
+                    
+                        <code>callback</code>
+                    
+                </li>
+            
+            </ul><span class="paren">)</span>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Task.html#method_start">Task</a>:
+            
+        
+        
+        <a href="../files/src_Task.js.html#l72"><code>start:72</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Start the load. This implementation is a NOP.</p>
+
+    </div>
+
+    
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+            
+                <li class="param">
+                    
+                        <code class="param-name">callback</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+                    
+
+                    
+
+                    <div class="param-description">
+                        <p>Callback to call when the load is done</p>
+
+                    </div>
+
+                    
+                </li>
+            
+            </ul>
+        </div>
+    
+
+    
+
+    
+</div>
+
+                
                     <div id="method_toString" class="method item">
     <h3 class="name"><code>toString</code></h3>
 
@@ -797,16 +1165,16 @@ kept track of, this always returns true.</p>
 
     <div class="meta">
         
+            <p>Inherited from
+            <a href="../classes/Task.html#method_toString">
+                Task
+            </a>
             
-                
-                <p>
-                
-                Defined in
-                
+            but overwritten in
             
         
         
-        <a href="../files/src_ListTask.js.html#l156"><code>toString:156</code></a>
+        <a href="../files/src_ListTask.js.html#l158"><code>toString:158</code></a>
         
         </p>
 
@@ -851,6 +1219,50 @@ kept track of, this always returns true.</p>
                 <h2 class="off-left">Properties</h2>
 
                 
+                    <div id="property__isDestroyed" class="property item protected inherited">
+    <h3 class="name"><code>_isDestroyed</code></h3>
+    <span class="type">Bool</span>
+
+    
+
+    
+        <span class="flag protected">protected</span>
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Task.html#property__isDestroyed">Task</a>:
+            
+        
+        
+        <a href="../files/src_Task.js.html#l37"><code>_isDestroyed:37</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Bool to keep track if this has been destroyed</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
                     <div id="property__manager" class="property item private">
     <h3 class="name"><code>_manager</code></h3>
     <span class="type"><a href="../classes/TaskManager.html" class="crosslink">TaskManager</a></span>
@@ -876,7 +1288,7 @@ kept track of, this always returns true.</p>
             
         
         
-        <a href="../files/src_ListTask.js.html#l41"><code>_manager:41</code></a>
+        <a href="../files/src_ListTask.js.html#l43"><code>_manager:43</code></a>
         
         </p>
 
@@ -923,7 +1335,7 @@ kept track of, this always returns true.</p>
             
         
         
-        <a href="../files/src_ListTask.js.html#l49"><code>_results:49</code></a>
+        <a href="../files/src_ListTask.js.html#l51"><code>_results:51</code></a>
         
         </p>
 
@@ -934,6 +1346,90 @@ kept track of, this always returns true.</p>
 
     <div class="description">
         <p>The load results dictionary</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_callback" class="property item inherited">
+    <h3 class="name"><code>callback</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" class="crosslink external" target="_blank">Function</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Task.html#property_callback">Task</a>:
+            
+        
+        
+        <a href="../files/src_Task.js.html#l30"><code>callback:30</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>Callback to call when the task is completed</p>
+
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_id" class="property item inherited">
+    <h3 class="name"><code>id</code></h3>
+    <span class="type"><a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                <p>Inherited from
+                <a href="../classes/Task.html#property_id">Task</a>:
+            
+        
+        
+        <a href="../files/src_Task.js.html#l23"><code>id:23</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <p>The unique id of the task</p>
 
     </div>
 
@@ -968,7 +1464,7 @@ kept track of, this always returns true.</p>
             
         
         
-        <a href="../files/src_ListTask.js.html#l34"><code>list:34</code></a>
+        <a href="../files/src_ListTask.js.html#l36"><code>list:36</code></a>
         
         </p>
 

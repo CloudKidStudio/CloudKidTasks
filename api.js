@@ -14,8 +14,7 @@ YUI.add("yuidoc-meta", function(Y) {
     "allModules": [
         {
             "displayName": "cloudkid",
-            "name": "cloudkid",
-            "description": "A task to do some generic async function task"
+            "name": "cloudkid"
         }
     ]
 } };
