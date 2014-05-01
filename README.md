@@ -9,8 +9,8 @@ The easy way to use the task manager is to create a bunch of tasks and run the `
 
 ```js
 var tasks = [
-  new LoadTask('config', 'assets/config.json', onConfigLoaded,
-  new LoadTask('captions', 'assets/captions.json', onCaptionsLoaded
+  new LoadTask('config', 'assets/config.json', onConfigLoaded),
+  new LoadTask('captions', 'assets/captions.json', onCaptionsLoaded)
 ];
 
 cloudkid.TaskManager.process(tasks, function(){
