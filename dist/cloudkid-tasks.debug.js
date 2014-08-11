@@ -149,4 +149,30 @@
             this._manager && (this._manager.destroy(), this._manager = null), this.list = null;
         }
     }, namespace("cloudkid").ListTask = ListTask;
+}(), function() {
+    var PixiTask = function(id, urls, callback, updateCallback, generateCanvasTexture) {
+        this.initialize(id, urls, callback, updateCallback, generateCanvasTexture);
+    }, p = PixiTask.prototype = new cloudkid.Task();
+    p.Task_initialize = p.initialize, p.Task_destroy = p.destroy, p.urls = null, p.updateCallback = null, 
+    p.generateCanvas = !1, p._assetLoader = null, p.initialize = function(id, urls, callback, updateCallback, generateCanvasTexture) {
+        for (var cm = cloudkid.MediaLoader.instance.cacheManager, i = 0; i < urls.length; ++i) urls[i] = cm.prepare(urls[i]);
+        this.urls = urls, this.updateCallback = updateCallback, this.generateCanvas = generateCanvasTexture || !1, 
+        this.Task_initialize(id, callback);
+    }, p.start = function(callback) {
+        var opts = cloudkid.OS.instance.options;
+        this._assetLoader = new PIXI.AssetLoader(this.urls, opts.crossOrigin, this.generateCanvas, opts.basePath), 
+        this._assetLoader.onComplete = callback, this.updateCallback && (this._assetLoader.onProgress = this.onProgress.bind(this)), 
+        this._assetLoader.load();
+    }, p.onProgress = function() {
+        this.updateCallback();
+    }, p.cancel = function() {
+        return this._assetLoader.onComplete = null, this._assetLoader.onProgress = null, 
+        !0;
+    }, p.toString = function() {
+        return "[PixiTask ID (" + this.id + "), URLs (" + this.urls.join(", ") + ")]";
+    }, p.destroy = function() {
+        this._isDestroyed || (this.Task_destroy(), this.updateCallback = null, this.urls = null, 
+        this._assetLoader && (this._assetLoader.onComplete = null, this._assetLoader.onProgress = null), 
+        this._assetLoader = null);
+    }, namespace("cloudkid").PixiTask = PixiTask;
 }();

@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "dist/cloudkid-tasks.min.js",
     "dependencies": {
-        "cloudkid-os" : "*"
+        "cloudkid-framework" : "*"
     },
     "ignore": [
         "build.xml",
