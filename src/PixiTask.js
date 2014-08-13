@@ -93,7 +93,7 @@
 	*/
 	p.start = function(callback)
 	{
-		var opts = cloudkid.OS.instance.options;
+		var opts = cloudkid.Application.instance.options;
 		this._assetLoader = new PIXI.AssetLoader(this.urls, opts.crossOrigin, this.generateCanvas, opts.basePath);
 		this._assetLoader.onComplete = callback;
 		if(this.updateCallback)

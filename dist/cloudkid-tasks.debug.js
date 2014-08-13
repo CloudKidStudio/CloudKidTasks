@@ -159,7 +159,7 @@
         this.urls = urls, this.updateCallback = updateCallback, this.generateCanvas = generateCanvasTexture || !1, 
         this.Task_initialize(id, callback);
     }, p.start = function(callback) {
-        var opts = cloudkid.OS.instance.options;
+        var opts = cloudkid.Application.instance.options;
         this._assetLoader = new PIXI.AssetLoader(this.urls, opts.crossOrigin, this.generateCanvas, opts.basePath), 
         this._assetLoader.onComplete = callback, this.updateCallback && (this._assetLoader.onProgress = this.onProgress.bind(this)), 
         this._assetLoader.load();
