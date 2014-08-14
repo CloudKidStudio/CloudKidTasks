@@ -1,0 +1,16 @@
+{
+	"name" : "CloudKidTasks",
+	"version" : "1.0.0",
+	"description" : "A library for handling a list of tasks.",
+	"url" : "http://github.com/CloudKidStudio/CloudKidTasks",
+	"output" : "cloudkid-tasks",
+	"main" : [
+		"src/TaskEvent.js",
+		"src/Task.js",
+		"src/FunctionTask.js",
+		"src/LoadTask.js",
+		"src/TaskManager.js",
+		"src/ListTask.js",
+		"src/PixiTask.js"
+	]
+}
